@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=zeitSeitLetztemSpielzug
+comment0.target=void\ spielzugAusfuehren(long)
+comment0.text=\r\n\ L\u00E4sst\ ein\ Objekt\ seinen\ Spielzug\ ausf\u00FChren.\r\n\ @param\ zeitSeitLetzterAktion\ die\ Zeit,\ die\ seit\ dem\ letzten\ Spielzug\ vergangen\ ist.\r\n
+numComments=1

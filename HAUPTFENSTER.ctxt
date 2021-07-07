@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=meineSpiellogikNeu
+comment0.target=HAUPTFENSTER\ gebeHauptfenster(SPIELLOGIK)
+comment0.text=\r\n\ Gibt\ das\ Hauptfenster\ zur\u00FCck,\ bzw.\ erstellt\ dieses.\r\n\ Singleton\ -\ Softwaremuster\!\r\n\ @return\ das\ Hauptfenster\r\n
+comment1.params=meineSpiellogikNeu
+comment1.target=HAUPTFENSTER(SPIELLOGIK)
+comment1.text=\r\n\ Konstuktor\r\n
+comment2.params=
+comment2.target=int\ gebeHoehe()
+comment2.text=\r\n\ Gibt\ die\ H\u00F6he\ des\ Bildschirms\ in\ Pixeln\ zur\u00FCck\r\n\ @return\ die\ H\u00F6he\ des\ Bildschirms\r\n
+comment3.params=
+comment3.target=int\ gebeBreite()
+comment3.text=\r\n\ Gibt\ die\ Breite\ des\ Bildschirms\ in\ Pixeln\ zur\u00FCck\r\n\ @return\ die\ Breite\ des\ Bildschirms\r\n
+comment4.params=
+comment4.target=java.awt.image.BufferStrategy\ gebeBufferStrategy()
+comment4.text=\r\n\ Liefert\ das\ BufferStrategy-Objekt\ des\ Vollbild-Fensters.\r\n\ Das\ Objekt\ enth\u00E4lt\ den\ Grafikkontext,\ auf\ den\ gezeichnet\ werden\ darf\ und\ k\u00FCmmert\ sich\ um\ das\ double-Buffering.\r\n\ @return\ das\ BufferStrategy-Objekt,\ auf\ dessen\ Grafikkontext\ (aktiv)\ gezeichnet\ werden\ darf.\r\n
+comment5.params=
+comment5.target=java.awt.GraphicsConfiguration\ gebeGraphicsConfiguration()
+comment5.text=\r\n\ Gibt\ das\ Graphics\ Configuration\ -\ Objekt\ des\ Fensters\ zur\u00FCck\r\n\ @return\ das\ GraphicsConfiguration\ -\ Objekt.\r\n
+comment6.params=
+comment6.target=void\ neuZeichnen()
+comment6.text=\r\n\ Zeichnet\ den\ Bildschirminhalt\ neu.\r\n\ Diese\ Methode\ musst\ du\ NICHT\ ver\u00E4ndern.\ Zeichne\ deinen\ Bildschirminhalt\ in\ der\ Methode\ void\ zeichnen(Graphics\ g)\r\n
+comment7.params=g
+comment7.target=void\ zeichnen(java.awt.Graphics)
+comment7.text=\r\n\ Methode\ zum\ Zeichnen\ der\ Inhalte\ auf\ den\ Bildschirm\r\n\ @param\ g\ der\ Graphikkontext,\ der\ zum\ Zeichnen\ auf\ den\ Bildschirm\ verwendet\ werden\ soll.\r\n
+numComments=8

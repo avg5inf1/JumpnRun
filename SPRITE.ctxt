@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SPRITE()
+comment0.text=\r\n\ Konstruktor\ f\u00FCr\ den\ Sprite.\r\n
+comment1.params=dateiname
+comment1.target=SPRITE(java.lang.String)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ den\ Sprite.\r\n\ @param\ dateiname\ Pr\u00E4fix\ der\ Bilddateinamen\r\n
+comment2.params=
+comment2.target=int\ gebeBreiteOriginal()
+comment2.text=\r\n\ Liefert\ die\ Breite\ des\ Sprites\r\n\ @return\ die\ Breite\ des\ Sprites.\r\n
+comment3.params=
+comment3.target=int\ gebeHoeheOriginal()
+comment3.text=\r\n\ Liefert\ die\ H\u00F6he\ des\ Sprites\r\n\ @return\ die\ H\u00F6he\ des\ Sprites.\r\n
+comment4.params=g
+comment4.target=void\ zeichnen(java.awt.Graphics)
+comment5.params=zeitSeitLetztemSpielzug
+comment5.target=void\ spielzugAusfuehren(long)
+comment6.params=
+comment6.target=void\ defaultBilderLaden()
+comment6.text=\r\n\ L\u00E4dt\ die\ default-Bilder\ f\u00FCr\ einen\ Sprite.\r\n
+comment7.params=grafikDateiPraefix
+comment7.target=void\ grafikenLaden(java.lang.String)
+comment7.text=\r\n\ L\u00E4dt\ die\ Grafikdateien\ f\u00FCr\ das\ Sprite.\r\n\ @param\ der\ Pr\u00E4fix\ der\ Grafikdateien\ des\ Sprites.\ Enth\u00E4lt\ die\ Dateiname\ der\ Bitmap-Dateien\ ohne\ Nummer\ und\ ohne\ .png.\ Beispiel\:\ Die\ Grafikdateien\ hei\u00DFen\ monster1.png,\ monster2.png,\ monster3.png\ ->\ grafikDateinameOhneNummer\ muss\ monster\ hei\u00DFen.\r\n
+comment8.params=grafikDateiPraefix
+comment8.target=void\ grafikLaden(java.lang.String)
+numComments=9

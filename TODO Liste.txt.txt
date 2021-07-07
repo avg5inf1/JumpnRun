@@ -1,0 +1,6 @@
+BufferedImage gegen VolatileImage ersetzen? -> Vermutlich unnötig
+
+Sprite abstract machen.
+
+Methode spielzugAusfuehren(long zeitSeitLetztemSpielzug) erweitern 
+zu Methode spielzugAusfuehren(long zeitSeitLetztemSpielzug, List<Moveable>)
