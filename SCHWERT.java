@@ -4,6 +4,8 @@ import java.awt.event.*;
  * Klasse SCHWERT.
  * 
  * @author M.Kraus
+ * 
+ * version 1.1
  */
 public class SCHWERT extends ITEM implements KeyListener, MOVEABLE{
     /*---------------Attribute-----*/
@@ -41,4 +43,14 @@ public class SCHWERT extends ITEM implements KeyListener, MOVEABLE{
     
     public void keyTyped(KeyEvent e)
     {} 
+    
+    public void setY(int newY)
+    {
+        y = newY;
+    }
+    
+    public void setX(int newX)
+    {
+        x = newX;
+    }
 }

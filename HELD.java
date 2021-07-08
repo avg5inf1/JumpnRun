@@ -2,7 +2,7 @@ import java.awt.event.*;
 
 /**
  * @author M. Buchner
- * @version 1.0
+ * @version 1.1
  */
 public class HELD extends SPRITE implements KeyListener, MOVEABLE
 {
@@ -16,6 +16,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
     private boolean controlPressed;
     private double geschwindigkeit; 
     private int leben = 3;
+    private boolean jumping = false;
 
     /**
      * Konstruktor
@@ -74,9 +75,12 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         
         if(e.getKeyCode() == KeyEvent.VK_SPACE)
         {
-            y = y - (int)Math.ceil(150);
+            if(jumping == false)
+            {
+                y = y - (int)Math.ceil(150);
             
-            aktuellesEinzelbild = 4;
+                aktuellesEinzelbild = 4;
+            }
         }
         
         if(e.getKeyCode() == KeyEvent.VK_CONTROL)
@@ -128,11 +132,22 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         int deltaY = 0;             // Bewegung des Helden in y - Richtung.
         aktuellesEinzelbild = 4;    // keine Blickrichtung.
               
-        if(y <= 700 -hoehe && x >= 300 && x<= 800)
+        if((y <= 700 -hoehe && x >= 250 && x<= 800) ||  (x < 250 || x > 800))
         {
-            deltaY = 5;
+            deltaY = 7;
+            jumping = true;
+            if(y >= 1080)
+            {
+                y = -100;
+            }
         }
         
+        else
+        {
+            jumping = false;
+        }
+
+
         
         
         if(upPressed)
@@ -174,9 +189,9 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         y = y + deltaY;
         
         // Der Held darf den Bildschrim nicht verlassen.
-        y = Math.max(y, 0);
+        //y = Math.max(y, 0);
         x = Math.max(x, 0);        
-        y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
+        //y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
         x = Math.min(x, HAUPTFENSTER.gebeBreite() - breite);
         
          //kollision quadrat

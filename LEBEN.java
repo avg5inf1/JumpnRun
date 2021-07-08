@@ -4,6 +4,8 @@ import java.awt.event.*;
  * Klasse LEBEN.
  * 
  * @author K. Maik 
+ * 
+ * version 1.1
  */
 public class LEBEN extends ITEM implements KeyListener, MOVEABLE{
     /*---------------Attribute-----*/
@@ -34,9 +36,8 @@ public class LEBEN extends ITEM implements KeyListener, MOVEABLE{
     {
         if(e.getKeyCode() == KeyEvent.VK_E)
         {
+            useItem();
             ePressed = true;
-            System.out.println("E Pressed");
-            meineSpielLogik.itemAufheben(this);
         }
 
     }
