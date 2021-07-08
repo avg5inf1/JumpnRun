@@ -6,7 +6,7 @@ import java.awt.image.BufferStrategy;
  * Ein einfaches Beispiel einer Vollbilddarstellung in Java.
  * 
  * @author M.Buchner
- * @version 1.
+ * @version 1.1
  */
 public class HAUPTFENSTER extends JFrame
 {
@@ -145,9 +145,8 @@ public class HAUPTFENSTER extends JFrame
     private void zeichnen(Graphics g)
     {
         meineSpiellogik.beispielSprite.zeichnen(g);
-        meineSpiellogik.gebeLeben().zeichnen(g);
         meineSpiellogik.gebeHeld().zeichnen(g);
-        
+        meineSpiellogik.gebeLeben().zeichnen(g);
         g.setColor(Color.CYAN);
         g.fillRect(100, 200 , 200, 200);
         

@@ -4,6 +4,8 @@ import java.awt.event.*;
  * Klasse PROJEKTILE.
  * 
  * @author M.Kraus
+ * 
+ * version 1.1
  */
 public class PROJEKTILE extends ITEM implements KeyListener, MOVEABLE{
     /*---------------Attribute-----*/
@@ -41,4 +43,14 @@ public class PROJEKTILE extends ITEM implements KeyListener, MOVEABLE{
     
     public void keyTyped(KeyEvent e)
     {} 
+    
+    public void setX(int newX)
+    {
+        x = newX;
+    }
+    
+    public void setY(int newY)
+    {
+        y = newY;
+    }
 }

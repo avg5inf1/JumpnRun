@@ -9,7 +9,7 @@ import javax.imageio.*;
  * Sie wird zur grafischen Darstellung von Autos, Monstern, Helden, etc. verwendet.
  * 
  * @author Michael Buchner
- * @version 1.0
+ * @version 1.1
  */
 public class SPRITE extends Rectangle2D.Double implements DRAWABLE, MOVEABLE
 {

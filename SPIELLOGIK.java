@@ -6,7 +6,7 @@ import java.awt.image.*;
 /**
  * Diese Klasse enthält die Spiellogik des Spiels * 
  * @author M. Buchner
- * @version 1.0
+ * @version 1.1
  */
 public class SPIELLOGIK extends Thread
 {   
@@ -134,9 +134,8 @@ public class SPIELLOGIK extends Thread
 
     public void itemAufheben(ITEM neuesItem)
     {
-        //+ meinHeld.gebeBreiteOriginal()
-        //+ meinHeld.gebeHoeheOriginal()
-        if(meinHeld.getX() >= neuesItem.getX() + 100 && meinHeld.getY() >= neuesItem.getY() - 100 && meinHeld.getX()  <= neuesItem.getX() + neuesItem.gebeBreiteOriginal() + 100 && meinHeld.getY()  <= neuesItem.getY() + neuesItem.gebeHoeheOriginal() + 100)
+        
+        if(meinHeld.getX() >= neuesItem.getX() && meinHeld.getY() >= neuesItem.getY() && meinHeld.getX() <= neuesItem.getX() + neuesItem.gebeBreiteOriginal() && meinHeld.getY() <= neuesItem.getY() + neuesItem.gebeHoeheOriginal())
         {
             System.out.println(meinHeld.getX() + " " + meinHeld.getY());
             if(items[0] != null)
@@ -144,15 +143,24 @@ public class SPIELLOGIK extends Thread
                 if(items[1] != null)
                 {
                     items[2] = neuesItem;
+                    neuesItem.setX(4000);
+                    neuesItem.setY(4000);
+                    meinHauptfenster.neuZeichnen();
                 }
                 else
                 {
                     items[1] = neuesItem;
+                    neuesItem.setX(4000);
+                    neuesItem.setY(4000);
+                    meinHauptfenster.neuZeichnen();
                 }
             }
             else
             {
                 items[0] = neuesItem;
+                neuesItem.setX(4000);
+                neuesItem.setY(4000);
+                meinHauptfenster.neuZeichnen();
             }
         }
     }

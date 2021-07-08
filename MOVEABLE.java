@@ -3,7 +3,7 @@
  * Ein Interface, welches von beweglichen Objekten implementiert werden soll.
  * 
  * @author Michael Buchner
- * @version 1.0
+ * @version 1.1
  */
 public interface MOVEABLE
 {       
