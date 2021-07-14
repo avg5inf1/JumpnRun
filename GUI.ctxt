@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=title\ button1Text\ textLabel
+comment0.target=GUI(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=---------------Konstruktor---
+numComments=1

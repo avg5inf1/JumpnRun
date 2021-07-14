@@ -14,4 +14,6 @@ comment4.params=zeitSeitLetztemSpielzug
 comment4.target=void\ spielzugAusfuehren(long)
 comment5.params=
 comment5.target=void\ lebenAdd()
-numComments=6
+comment6.params=
+comment6.target=void\ die()
+numComments=7

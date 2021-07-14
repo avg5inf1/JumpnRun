@@ -83,10 +83,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             }
         }
         
-        if(e.getKeyCode() == KeyEvent.VK_CONTROL)
-        {
-            controlPressed = true;
-        }
+        
     }
 
     /**
@@ -111,10 +108,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             upPressed = false;
         }
         
-        if(e.getKeyCode() == KeyEvent.VK_CONTROL)
-        {
-            controlPressed = false;
-        }
+        
         
         if(e.getKeyCode() == KeyEvent.VK_SPACE)
         {
@@ -138,7 +132,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             jumping = true;
             if(y >= 1080)
             {
-                y = -100;
+                die();
             }
         }
         
@@ -205,14 +199,31 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
     
     public void lebenAdd()
     {
-        if(leben > 2){
-            leben = 3;
+        if(leben < 3)
+        {
+            leben = leben + 1;
+            System.out.println("Leben addiert");
         }
         else
         {
-            leben = leben + 1;
+            System.out.println("Maximale Gesundheit bereits erreicht");
         }
-        
+    }
+    
+    public void die()
+    {
+        leben = leben - 1;
+        if(leben > 0)
+        {
+            x = 300;
+            y = 400;
+        }
+        else
+        {
+            x = 4000;
+            y = 4000;
+            GUI gameover = new GUI("Game Over", "Quit", "Game Over");
+        }
     }
     
     
