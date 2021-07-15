@@ -25,6 +25,7 @@ public class SPRITE extends Rectangle2D.Double implements DRAWABLE, MOVEABLE
 
     protected String grafikDateinameOhneNummer;         // Enthält die Dateiname der Bitmap-Dateien ohne Nummer und ohne .png. Beispiel: Die Grafikdateien heißen monster1.png, monster2.png, monster3.png -> grafikDateinameOhneNummer muss monster heißen.
 
+        
     /**
      * Konstruktor für den Sprite.
      */
@@ -133,8 +134,9 @@ public class SPRITE extends Rectangle2D.Double implements DRAWABLE, MOVEABLE
         // TODO: Prüfen: Grafiken laden asynchron? -> Würde zu einem Bug führen: meineEinzelBilder darf in der Methode zeichnen(Graphics g ) nicht mehr auf null geprüft werden. Stattdessen: boolean grafikenGeladen.
 
         // Anzahl der Einzelbilder ermitteln
-        
+        System.out.println("möchte laden: "+grafikDateiPraefix);
         GraphicsConfiguration gc = HAUPTFENSTER.gebeGraphicsConfiguration();
+        
         
         int anzahlEinzelbilder = 0;
         boolean fertig = false;

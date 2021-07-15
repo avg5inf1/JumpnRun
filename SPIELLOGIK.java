@@ -165,7 +165,10 @@ public class SPIELLOGIK extends Thread implements KeyListener
             }
         }
     }
+public void keyPressed(KeyEvent e){
 
+
+}
     public void keyPressed(KeyEvent e, ITEM usedItem)
     {
 

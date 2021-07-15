@@ -16,6 +16,8 @@ public class HAUPTFENSTER extends JFrame
     private boolean wunschDisplayModeVerfuegbar;
 
     private static HAUPTFENSTER diesesHauptfenster;
+    
+    HINTERGRUND Hintergrund;
 
     private static GraphicsConfiguration gc; 
 
