@@ -8,7 +8,7 @@ import java.awt.image.*;
  * @author M. Buchner
  * @version 1.1
  */
-public class SPIELLOGIK extends Thread
+public class SPIELLOGIK extends Thread implements KeyListener
 {   
     private HAUPTFENSTER meinHauptfenster;
 
@@ -20,6 +20,7 @@ public class SPIELLOGIK extends Thread
     public SPRITE beispielSprite;
     private SCHWERT schwert;
     private LEBEN leben;
+    
 
     public ITEM[] items;
 
@@ -125,9 +126,9 @@ public class SPIELLOGIK extends Thread
         }
     }
 
-    void lebenAdd()
+    public void lebenAdd()
     {
-
+        System.out.println("Leben wird hinzugefügt");
         meinHeld.lebenAdd();
 
     }

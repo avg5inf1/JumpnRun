@@ -40,7 +40,12 @@ public class HAUPTFENSTER extends JFrame
      */
     private HAUPTFENSTER(SPIELLOGIK meineSpiellogikNeu)
     {
-        meineSpiellogik = meineSpiellogikNeu;        
+        meineSpiellogik = meineSpiellogikNeu;  
+        
+        Hintergrund = new HINTERGRUND();
+        Hintergrund.setHintergrundX(300);
+        Hintergrund.setHintergrundY(300);
+        Hintergrund.grafikenLaden("Background1");
 
         try 
         {
@@ -145,13 +150,21 @@ public class HAUPTFENSTER extends JFrame
     private void zeichnen(Graphics g)
     {
         meineSpiellogik.beispielSprite.zeichnen(g);
-        meineSpiellogik.gebeHeld().zeichnen(g);
         meineSpiellogik.gebeLeben().zeichnen(g);
+        
+        g.setColor(Color.BLACK);
+        g.fillRect(0,0,this.getWidth(), this.getHeight());
+               
         g.setColor(Color.CYAN);
         g.fillRect(100, 200 , 200, 200);
         
         g.setColor(Color.CYAN);
         g.fillRect(300, 700, 500, 200);
+        
+        meineSpiellogik.gebeHeld().zeichnen(g);
+        
+        g.setColor(Color.YELLOW);
+        g.drawLine(300,0,300,this.getHeight());
     }
 
 }

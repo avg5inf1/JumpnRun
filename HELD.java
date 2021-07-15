@@ -14,6 +14,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
     private boolean rightPressed;
     private boolean spacePressed;
     private boolean controlPressed;
+    
     private double geschwindigkeit; 
     private int leben = 3;
     private boolean jumping = false;
@@ -59,15 +60,11 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             rightPressed = true;
         }
 
-       
-
         if(e.getKeyCode() == KeyEvent.VK_UP)
         {
             upPressed = true;
         }
         
-       
-
         if(e.getKeyCode() == KeyEvent.VK_UP)
         {
             upPressed = true;
@@ -77,6 +74,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         {
             if(jumping == false)
             {
+                y = y - (int)Math.ceil(200);
                 y = y - (int)Math.ceil(150);
             
                 aktuellesEinzelbild = 4;
@@ -105,7 +103,6 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             rightPressed = false;
         }
 
-
         if(e.getKeyCode() == KeyEvent.VK_UP)
         {
             upPressed = false;
@@ -131,24 +128,36 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         int deltaX = 0;             // Bewegung des Helden in x - Richtung.
         int deltaY = 0;             // Bewegung des Helden in y - Richtung.
         aktuellesEinzelbild = 4;    // keine Blickrichtung.
-              
+        
+        //Kollisions Spielwelt
+        
         if((y <= 700 -hoehe && x >= 250 && x<= 800) ||  (x < 250 || x > 800))
         {
             deltaY = 7;
             jumping = true;
             if(y >= 1080)
             {
-                y = -100;
+                die();
             }
         }
-        
         else
         {
             jumping = false;
         }
-
-
         
+        
+        
+        if(y >= 709-hoehe && x >= 809-breite)
+        {
+            x = Math.max(x, 809);
+        }
+        
+        if(y >= 709-hoehe && x <= 291+breite)
+        {
+            x = Math.min(x, 291-breite);
+        }
+        
+        //Bewegungssteurerung
         
         if(upPressed)
         {
@@ -178,10 +187,10 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             aktuellesEinzelbild = 1;
         }
         
-        if(controlPressed)      
-        {
-            hoehe = (1/100)*hoehe;
-        }
+        //         if(controlPressed)      
+        //         {
+        //             hoehe = (1/100)*hoehe;
+        //         }
         
         // TODO: weitere Einzelbilder für schräge Bewegung.
         
@@ -189,16 +198,11 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         y = y + deltaY;
         
         // Der Held darf den Bildschrim nicht verlassen.
-        //y = Math.max(y, 0);
-        x = Math.max(x, 0);        
-        //y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
-        x = Math.min(x, HAUPTFENSTER.gebeBreite() - breite);
         
-         //kollision quadrat
-        //         if(y <= 700 -hoehe && x >= 300 && x<= 800)
-        //         {
-        //             y = Math.max(y, 700 -hoehe);
-        //         }
+        y = Math.max(y, 0);
+        x = Math.max(x, 0);        
+        //         y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
+        x = Math.min(x, HAUPTFENSTER.gebeBreite() - breite);
                
         this.setRect(x, y, hoehe, breite);
     }
@@ -213,6 +217,28 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             leben = leben + 1;
         }
         
+    }
+    
+    
+    /**
+     * Methode die ein Leben enfernt, wenn der Spieler den Bildschirm nach unten verlässt.
+     * Bei Leben == 0 "Game Over"
+     *
+     */
+    public void die()
+    {
+        leben = leben - 1;
+        if(leben > 0)
+        {
+            x = 300;
+            y = 400;
+        }
+        else
+        {
+            x = 4000;
+            y = 4000;
+            GUI gameover = new GUI("Game Over", "Quit", "Game Over");
+        }
     }
     
     

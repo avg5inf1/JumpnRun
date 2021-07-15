@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=HINTERGRUND()
+comment0.text=---------------Konstruktor---
+comment1.params=newHintergrundX
+comment1.target=void\ setHintergrundX(int)
+comment1.text=---------------Methoden------
+comment2.params=newHintergrundY
+comment2.target=void\ setHintergrundY(int)
+comment3.params=
+comment3.target=int\ getHintergrundX()
+comment4.params=
+comment4.target=int\ getHintergrundY()
+numComments=5

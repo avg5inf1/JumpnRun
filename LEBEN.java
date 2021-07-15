@@ -29,6 +29,7 @@ public class LEBEN extends ITEM implements KeyListener, MOVEABLE{
 
     
     public void useItem(){
+        System.out.println("Hi");
         meineSpielLogik.lebenAdd();
     }
 
@@ -61,5 +62,9 @@ public class LEBEN extends ITEM implements KeyListener, MOVEABLE{
     public void setY(int newY)
     {
         y = newY;
+    }
+    public void ichbineineMethode(){
+    
+    System.out.println("Ich habe mich verändert");
     }
 }
