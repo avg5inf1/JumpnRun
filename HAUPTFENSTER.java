@@ -20,6 +20,8 @@ public class HAUPTFENSTER extends JFrame
     private static GraphicsConfiguration gc; 
 
     private final SPIELLOGIK meineSpiellogik;
+    
+    public HINTERGRUND Hintergrund;
 
     /**
      * Gibt das Hauptfenster zurück, bzw. erstellt dieses.
@@ -40,7 +42,12 @@ public class HAUPTFENSTER extends JFrame
      */
     private HAUPTFENSTER(SPIELLOGIK meineSpiellogikNeu)
     {
-        meineSpiellogik = meineSpiellogikNeu;        
+        meineSpiellogik = meineSpiellogikNeu;  
+        
+        Hintergrund = new HINTERGRUND();
+        Hintergrund.setHintergrundX(300);
+        Hintergrund.setHintergrundY(300);
+        Hintergrund.grafikenLaden("Background1");
 
         try 
         {

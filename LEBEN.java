@@ -10,7 +10,7 @@ import java.awt.event.*;
 public class LEBEN extends ITEM implements KeyListener, MOVEABLE{
     /*---------------Attribute-----*/
 
-    
+    SPIELLOGIK meineSpielLogik;
 
     private boolean ePressed;
 
@@ -19,7 +19,6 @@ public class LEBEN extends ITEM implements KeyListener, MOVEABLE{
     {
         super(neueSpielLogik);
         //meineSpielLogik.hauptfensterGeben().addKeyListener(this);
-        
         breite = gebeBreiteOriginal();
         hoehe = gebeHoeheOriginal();
         x = HAUPTFENSTER.gebeHoehe() - hoehe;

@@ -20,6 +20,7 @@ public class SPIELLOGIK extends Thread implements KeyListener
     public SPRITE beispielSprite;
     private SCHWERT schwert;
     private LEBEN leben;
+    
 
     public ITEM[] items;
 
