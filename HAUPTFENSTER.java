@@ -153,6 +153,7 @@ public class HAUPTFENSTER extends JFrame
     {
         meineSpiellogik.beispielSprite.zeichnen(g);
         meineSpiellogik.gebeLeben().zeichnen(g);
+        meineSpiellogik.gebeHeld().zeichnen(g);
         
         g.setColor(Color.BLACK);
         g.fillRect(0,0,this.getWidth(), this.getHeight());

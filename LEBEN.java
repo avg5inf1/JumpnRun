@@ -63,8 +63,4 @@ public class LEBEN extends ITEM implements KeyListener, MOVEABLE{
     {
         y = newY;
     }
-    public void ichbineineMethode(){
-    
-    System.out.println("Ich habe mich verändert");
-    }
 }

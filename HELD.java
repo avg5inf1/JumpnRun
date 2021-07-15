@@ -60,11 +60,15 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             rightPressed = true;
         }
 
+       
+
         if(e.getKeyCode() == KeyEvent.VK_UP)
         {
             upPressed = true;
         }
         
+       
+
         if(e.getKeyCode() == KeyEvent.VK_UP)
         {
             upPressed = true;
@@ -72,13 +76,9 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         
         if(e.getKeyCode() == KeyEvent.VK_SPACE)
         {
-            if(jumping == false)
-            {
-                y = y - (int)Math.ceil(200);
-                y = y - (int)Math.ceil(150);
+            y = y - (int)Math.ceil(150);
             
-                aktuellesEinzelbild = 4;
-            }
+            aktuellesEinzelbild = 4;
         }
         
         if(e.getKeyCode() == KeyEvent.VK_CONTROL)
@@ -102,6 +102,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         {
             rightPressed = false;
         }
+
 
         if(e.getKeyCode() == KeyEvent.VK_UP)
         {
@@ -187,10 +188,10 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             aktuellesEinzelbild = 1;
         }
         
-        //         if(controlPressed)      
-        //         {
-        //             hoehe = (1/100)*hoehe;
-        //         }
+        if(controlPressed)      
+        {
+            hoehe = (1/100)*hoehe;
+        }
         
         // TODO: weitere Einzelbilder für schräge Bewegung.
         
@@ -198,11 +199,16 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         y = y + deltaY;
         
         // Der Held darf den Bildschrim nicht verlassen.
-        
         y = Math.max(y, 0);
         x = Math.max(x, 0);        
-        //         y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
+        y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
         x = Math.min(x, HAUPTFENSTER.gebeBreite() - breite);
+        
+         //kollision quadrat
+        //         if(y <= 700 -hoehe && x >= 300 && x<= 800)
+        //         {
+        //             y = Math.max(y, 700 -hoehe);
+        //         }
                
         this.setRect(x, y, hoehe, breite);
     }
