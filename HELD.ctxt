@@ -16,4 +16,5 @@ comment5.params=
 comment5.target=void\ lebenAdd()
 comment6.params=
 comment6.target=void\ die()
+comment6.text=\r\n\ Methode\ die\ ein\ Leben\ enfernt,\ wenn\ der\ Spieler\ den\ Bildschirm\ nach\ unten\ verl\u00E4sst.\r\n\ Bei\ Leben\ \=\=\ 0\ "Game\ Over"\r\n\r\n
 numComments=7

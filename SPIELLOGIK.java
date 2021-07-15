@@ -35,7 +35,6 @@ public class SPIELLOGIK extends Thread implements KeyListener
     public SPIELLOGIK()
     {
         meinHauptfenster = HAUPTFENSTER.gebeHauptfenster(this);
-        hauptfensterGeben().addKeyListener(this);
         beispielSprite = new SPRITE();
         beispielSprite.grafikenLaden("Schwert");
 
@@ -167,12 +166,11 @@ public class SPIELLOGIK extends Thread implements KeyListener
         }
     }
 
-    public void keyPressed(KeyEvent e)
+    public void keyPressed(KeyEvent e, ITEM usedItem)
     {
-        ITEM usedItem;
+
         if(e.getKeyCode() == KeyEvent.VK_1)
         {
-            
             onePressed = true;
             usedItem = items[0];
             items[0] = items[1];
