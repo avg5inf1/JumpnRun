@@ -8,7 +8,7 @@ import java.awt.image.*;
  * @author M. Buchner
  * @version 1.1
  */
-public class SPIELLOGIK extends Thread implements KeyListener
+public class SPIELLOGIK extends Thread
 {   
     private HAUPTFENSTER meinHauptfenster;
 
@@ -34,7 +34,6 @@ public class SPIELLOGIK extends Thread implements KeyListener
     public SPIELLOGIK()
     {
         meinHauptfenster = HAUPTFENSTER.gebeHauptfenster(this);
-        hauptfensterGeben().addKeyListener(this);
         beispielSprite = new SPRITE();
         beispielSprite.grafikenLaden("Schwert");
 

@@ -83,7 +83,7 @@ public class SPRITE extends Rectangle2D.Double implements DRAWABLE, MOVEABLE
         System.out.println("Fehler: Bild noch nicht geladen. SPRITE:gebeHoehe() lässt sich noch nicht aufrufen. 100 als default-Wert zurückgegeben");
         return 100;
     }
-    
+
     public void zeichnen(Graphics g)
     {
         if(meineEinzelbilder == null)
