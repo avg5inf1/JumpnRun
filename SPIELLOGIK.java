@@ -20,7 +20,6 @@ public class SPIELLOGIK extends Thread implements KeyListener
     public SPRITE beispielSprite;
     private SCHWERT schwert;
     private LEBEN leben;
-    
 
     public ITEM[] items;
 
@@ -166,15 +165,13 @@ public class SPIELLOGIK extends Thread implements KeyListener
             }
         }
     }
-public void keyPressed(KeyEvent e){
 
-
-}
-    public void keyPressed(KeyEvent e, ITEM usedItem)
+    public void keyPressed(KeyEvent e)
     {
-
+        ITEM usedItem;
         if(e.getKeyCode() == KeyEvent.VK_1)
         {
+            
             onePressed = true;
             usedItem = items[0];
             items[0] = items[1];
