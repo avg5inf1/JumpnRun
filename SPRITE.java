@@ -83,7 +83,7 @@ public class SPRITE extends Rectangle2D.Double implements DRAWABLE, MOVEABLE
         System.out.println("Fehler: Bild noch nicht geladen. SPRITE:gebeHoehe() lässt sich noch nicht aufrufen. 100 als default-Wert zurückgegeben");
         return 100;
     }
-
+    
     public void zeichnen(Graphics g)
     {
         if(meineEinzelbilder == null)
@@ -134,9 +134,8 @@ public class SPRITE extends Rectangle2D.Double implements DRAWABLE, MOVEABLE
         // TODO: Prüfen: Grafiken laden asynchron? -> Würde zu einem Bug führen: meineEinzelBilder darf in der Methode zeichnen(Graphics g ) nicht mehr auf null geprüft werden. Stattdessen: boolean grafikenGeladen.
 
         // Anzahl der Einzelbilder ermitteln
-        System.out.println("möchte laden: "+grafikDateiPraefix);
-        GraphicsConfiguration gc = HAUPTFENSTER.gebeGraphicsConfiguration();
         
+        GraphicsConfiguration gc = HAUPTFENSTER.gebeGraphicsConfiguration();
         
         int anzahlEinzelbilder = 0;
         boolean fertig = false;

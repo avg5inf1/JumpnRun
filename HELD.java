@@ -76,15 +76,15 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         
         if(e.getKeyCode() == KeyEvent.VK_SPACE)
         {
-            y = y - (int)Math.ceil(150);
+            if(jumping == false)
+            {
+                y = y - (int)Math.ceil(150);
             
-            aktuellesEinzelbild = 4;
+                aktuellesEinzelbild = 4;
+            }
         }
         
-        if(e.getKeyCode() == KeyEvent.VK_CONTROL)
-        {
-            controlPressed = true;
-        }
+        
     }
 
     /**
@@ -109,10 +109,7 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
             upPressed = false;
         }
         
-        if(e.getKeyCode() == KeyEvent.VK_CONTROL)
-        {
-            controlPressed = false;
-        }
+        
         
         if(e.getKeyCode() == KeyEvent.VK_SPACE)
         {
@@ -199,9 +196,9 @@ public class HELD extends SPRITE implements KeyListener, MOVEABLE
         y = y + deltaY;
         
         // Der Held darf den Bildschrim nicht verlassen.
-        y = Math.max(y, 0);
+        //y = Math.max(y, 0);
         x = Math.max(x, 0);        
-        y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
+        //y = Math.min(y, HAUPTFENSTER.gebeHoehe() - hoehe);
         x = Math.min(x, HAUPTFENSTER.gebeBreite() - breite);
         
          //kollision quadrat

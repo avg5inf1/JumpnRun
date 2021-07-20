@@ -35,6 +35,7 @@ public class SPIELLOGIK extends Thread implements KeyListener
     public SPIELLOGIK()
     {
         meinHauptfenster = HAUPTFENSTER.gebeHauptfenster(this);
+        hauptfensterGeben().addKeyListener(this);
         beispielSprite = new SPRITE();
         beispielSprite.grafikenLaden("Schwert");
 
